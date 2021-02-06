@@ -1,6 +1,12 @@
 // main.js
 
 // TODO
+
+//play sound
+//play the sound when you press the honk button 
+let honkBtn = document.getElementById("honk-btn");
+honkBtn.addEventListener(click, sound.play()); 
+
 //sound level changes depending on input field
 let sound = document.getElementById("horn-sound");
 let inputVolumeNum = document.getElementById("volume-number");
