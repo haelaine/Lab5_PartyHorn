@@ -24,7 +24,6 @@ inputVolumeNum.addEventListener("change", function() {
 
 sliderBar.addEventListener("change", function() {
     inputVolumeNum.value = sliderBar.value; 
-    sound.volume = sliderBar.value; 
     
     if (inputVolumeNum.value >= 67) {
         volumeIcon.setAttribute("src", "./assets/media/icons/volume-level-3.svg"); 
@@ -42,7 +41,9 @@ sliderBar.addEventListener("change", function() {
         volumeIcon.setAttribute("src", "./assets/media/icons/volume-level-0.svg"); 
         //honkBtn.disabled = true; 
     }
-        alert("slider bar has changed!!!");
+        alert("slider bar has changed;D!");
+        sound.volume = sliderBar.value; 
+
 });
 
 if (inputVolumeNum.value >= 67) {
