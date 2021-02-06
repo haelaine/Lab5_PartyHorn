@@ -19,7 +19,7 @@ let volumeIcon = document.getElementById("volume-image");
 inputVolumeNum.addEventListener("change", function() {
     sliderBar.value = inputVolumeNum.value; 
     sound.volume = inputVolumeNum.value; 
-    alert("inputVolumeNum has changed");
+    alert("inputVolumeNum has changed!!!");
 });
 
 sliderBar.addEventListener("change", function() {
@@ -38,7 +38,7 @@ sliderBar.addEventListener("change", function() {
     else if (inputVolumeNum.value == 0) {
         volumeIcon.setAttribute("src", "./assets/media/icons/volume-level-0.svg"); 
     }
-        alert("slider bar has changed");
+        alert("slider bar has changed!!!");
 });
 
 if (inputVolumeNum.value >= 67) {
@@ -59,7 +59,17 @@ let radioCarHorn = document.getElementById("radio-car-horn");
 let radioPartyHorn = document.getElementById("radio-party-horn"); 
 let hornImage = document.getElementById("sound-image"); 
 
-//if (radioAirHorn.checked) {
-  //  hornImage
-//}
+if (radioAirHorn.checked) {
+    hornImage.setAttribute("src", "./assets/media/images/party-horn.svg");
+    sound.setAttribute("src", "./assets/media/audio/air-horn.mp3"); 
+}
 
+if (radioCarHorn.checked) {
+    hornImage.setAttribute("src", "./assets/media/images/car.svg");
+    sound.setAttribute("src", "./assets/media/audio/car-horn.mp3"); 
+}
+
+if (radioPartyHorn.checked) {
+    hornImage.setAttribute("src", "./assets/media/images/party-horn.svg");
+    sound.setAttribute("src", "./assets/media/audio/party-horn.mp3"); 
+}
