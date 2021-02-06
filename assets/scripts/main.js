@@ -18,8 +18,26 @@ let volumeIcon = document.getElementById("volume-image");
 
 inputVolumeNum.addEventListener("change", function() {
     sliderBar.value = inputVolumeNum.value; 
+    
+    if (inputVolumeNum.value >= 67) {
+        volumeIcon.setAttribute("src", "./assets/media/icons/volume-level-3.svg"); 
+        honkBtn.disabled = false; 
+    }
+    else if (inputVolumeNum.value >= 34 && inputVolumeNum.value <= 66) {
+        volumeIcon.setAttribute("src", "./assets/media/icons/volume-level-2.svg"); 
+        honkBtn.disabled = false; 
+    }
+    else if (inputVolumeNum.value >= 1 && inputVolumeNum.value <= 33) {
+        volumeIcon.setAttribute("src", "./assets/media/icons/volume-level-1.svg"); 
+        honkBtn.disabled = false;
+    }
+    else if (inputVolumeNum.value == 0) {
+        volumeIcon.setAttribute("src", "./assets/media/icons/volume-level-0.svg"); 
+        honkBtn.disabled = true; 
+    }
+    
     sound.volume = inputVolumeNum.value; 
-    alert("inputVolumeNum has changed!!!");
+    alert("inputVolumeNum has changed :D!!!");
 });
 
 sliderBar.addEventListener("change", function() {
@@ -27,23 +45,21 @@ sliderBar.addEventListener("change", function() {
     
     if (inputVolumeNum.value >= 67) {
         volumeIcon.setAttribute("src", "./assets/media/icons/volume-level-3.svg"); 
-        //honkBtn.disabled = false; 
+        honkBtn.disabled = false; 
     }
     else if (inputVolumeNum.value >= 34 && inputVolumeNum.value <= 66) {
         volumeIcon.setAttribute("src", "./assets/media/icons/volume-level-2.svg"); 
-        //honkBtn.disabled = false; 
+        honkBtn.disabled = false; 
     }
     else if (inputVolumeNum.value >= 1 && inputVolumeNum.value <= 33) {
         volumeIcon.setAttribute("src", "./assets/media/icons/volume-level-1.svg"); 
-        //honkBtn.disabled = false;
+        honkBtn.disabled = false;
     }
     else if (inputVolumeNum.value == 0) {
         volumeIcon.setAttribute("src", "./assets/media/icons/volume-level-0.svg"); 
-        //honkBtn.disabled = true; 
+        honkBtn.disabled = true; 
     }
-        alert("slider bar has changed;D!");
-        sound.volume = sliderBar.value; 
-
+    sound.volume = inputVolumeNum.value; 
 });
 
 /*if (inputVolumeNum.value >= 67) {
