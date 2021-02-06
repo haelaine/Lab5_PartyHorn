@@ -37,7 +37,6 @@ inputVolumeNum.addEventListener("change", function() {
     }
     
     sound.volume = inputVolumeNum.value/100; 
-    alert("inputVolumeNum has changed YES !!!");
 });
 
 sliderBar.addEventListener("change", function() {
