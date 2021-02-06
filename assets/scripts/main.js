@@ -18,10 +18,13 @@ let sliderBar = document.getElementById("volume-slider");
 inputVolumeNum.addEventListener("change", function() {
     sliderBar.value = inputVolumeNum.value; 
     sound.volume = inputVolumeNum.value; 
+    alert("inputVolumeNum has changed");
 });
 
 sliderBar.addEventListener("change", function() {
     inputVolumeNum.value = sliderBar.value; 
     sound.volume = sliderBar.value; 
+    alert("slider bar has changed");
+
 });
 
