@@ -13,12 +13,12 @@ honkBtn.addEventListener("click", function() { alert("hello");});
 //sound level changes depending on input field
 let sound = document.getElementById("horn-sound");
 let inputVolumeNum = document.getElementById("volume-number");
+let sliderBar = document.getElementById("volume-slider"); 
 
 inputVolumeNum.addEventistener("change", function() {
     sliderBar.value = inputVolumeNum.value; 
     sound.volume = inputVolumeNum.value; 
 });
-
 
 
 
