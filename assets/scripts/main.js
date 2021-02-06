@@ -8,6 +8,7 @@ honkBtn.addEventListener("click", sound.play());
 honkBtn.addEventListener("click", function(event){
     event.preventDefault()
 }); 
+honkBtn.addEventListener("click", function() { alert("hello");}); 
 
 //sound level changes depending on input field
 let sound = document.getElementById("horn-sound");
