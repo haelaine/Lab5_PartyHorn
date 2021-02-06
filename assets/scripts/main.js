@@ -15,10 +15,13 @@ let sound = document.getElementById("horn-sound");
 let inputVolumeNum = document.getElementById("volume-number");
 let sliderBar = document.getElementById("volume-slider"); 
 
-inputVolumeNum.addEventistener("change", function() {
+inputVolumeNum.addEventListener("change", function() {
     sliderBar.value = inputVolumeNum.value; 
     sound.volume = inputVolumeNum.value; 
 });
 
-
+sliderBar.addEventListener("change", function() {
+    inputVolumeNum.value = sliderBar.value; 
+    sound.volume = sliderBar.value; 
+});
 
