@@ -25,7 +25,20 @@ inputVolumeNum.addEventListener("change", function() {
 sliderBar.addEventListener("change", function() {
     inputVolumeNum.value = sliderBar.value; 
     sound.volume = sliderBar.value; 
-    alert("slider bar has changed");
+    
+    if (inputVolumeNum.value >= 67) {
+        volumeIcon.setAttribute("src", "./assets/media/icons/volume-level-3.svg"); 
+    }
+    else if (inputVolumeNum.value >= 34 && inputVolumeNum.value <= 66) {
+        volumeIcon.setAttribute("src", "./assets/media/icons/volume-level-2.svg"); 
+    }
+    else if (inputVolumeNum.value >= 1 && inputVolumeNum.value <= 33) {
+        volumeIcon.setAttribute("src", "./assets/media/icons/volume-level-1.svg"); 
+    }
+    else if (inputVolumeNum.value == 0) {
+        volumeIcon.setAttribute("src", "./assets/media/icons/volume-level-0.svg"); 
+    }
+        alert("slider bar has changed");
 });
 
 if (inputVolumeNum.value >= 67) {
@@ -41,5 +54,12 @@ else if (inputVolumeNum.value == 0) {
     volumeIcon.setAttribute("src", "./assets/media/icons/volume-level-0.svg"); 
 }
 
+let radioAirHorn = document.getElementById("radio-air-horn"); 
+let radioCarHorn = document.getElementById("radio-car-horn"); 
+let radioPartyHorn = document.getElementById("radio-party-horn"); 
+let hornImage = document.getElementById("sound-image"); 
 
+//if (radioAirHorn.checked) {
+  //  hornImage
+//}
 
